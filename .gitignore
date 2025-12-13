@@ -3,3 +3,9 @@
 
 # 忽略 log 文件夹及其下所有内容
 log/
+
+src/vrpn/build
+
+src/build
+
+src/install

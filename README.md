@@ -2,22 +2,9 @@
 
 Ros2 package for transport vrpn data to ros2 topic
 
-## Quick start
+## 快速使用指南
 
-1. **安装VRPN库**
-   
-   执行以下命令安装VRPN库：
-
-   ```bash
-      git clone https://github.com/vrpn/vrpn.git
-      mkdir -p vrpn/build
-      cd vrpn/build
-      cmake ..
-      make 
-      sudo make install
-   ```
-
-2. **拉取vrpn_client_ros2代码，并配置VRPN server参数**
+1. **拉取vrpn_client_ros2代码，并配置VRPN server参数**
    
    执行以下命令拉取vrpn_client_ros2代码：
 
@@ -30,7 +17,7 @@ Ros2 package for transport vrpn data to ros2 topic
    ``` yaml
       /vrpn_listener:
          ros__parameters:
-            server: 192.168.3.41                 # VRPN server在局域网内的IP
+            server: 192.168.50.3                 # VRPN server在局域网内的IP,WINDY Lab配置为192.168.50.3
             port: 3883                           # VRPN server的服务端口
             frame_id: "world"                    # reference frame参数
             mainloop_frequency: 100.0            # 主循环频率，频率越高，越不容易丢失VRPN数据包，但同时计算负载越大
@@ -40,6 +27,19 @@ Ros2 package for transport vrpn data to ros2 topic
 
    * 根据动捕软件的数据发送设置，配置 `server` 和 `port` 参数
    * 不推荐修改其余配置项，默认即可
+   * 修改配置之后需要重新启动节点才会生效
+
+2. **安装VRPN库**
+   
+   执行以下命令安装VRPN库：
+
+   ```bash
+      cd src && mkdir -p vrpn/build
+      cd vrpn/build
+      cmake ..
+      make 
+      sudo make install
+   ```
 
 3. **编译package**
 
@@ -48,7 +48,7 @@ Ros2 package for transport vrpn data to ros2 topic
    ```bash
       source /opt/ros/${ROS_DISTRO}/setup.bash
       cd vrpn_client_ros2/src
-      colcon build
+      colcon build --packages-select vrpn_listener
    ```
 
 4. **启动vrpn_client_ros2**
@@ -62,4 +62,3 @@ Ros2 package for transport vrpn data to ros2 topic
    ```
 
    执行该指令后，VRPN动捕数据将被转发为ROS2话题
-   
