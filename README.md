@@ -2,9 +2,6 @@
 
 Ros2 package for transport vrpn data to ros2 topic
 
-
-
-
 ## Quick start
 
 1. **安装VRPN库**
@@ -33,12 +30,12 @@ Ros2 package for transport vrpn data to ros2 topic
    ``` yaml
       /vrpn_listener:
          ros__parameters:
-            server: 192.168.3.41              # VRPN server在局域网内的IP
-            port: 3883                        # VRPN server的服务端口
-            frame_id: "world"                 # reference frame参数
-            mainloop_frequency: 100.0         # 主循环频率，频率越高，越不容易丢失VRPN数据包，但同时计算负载越大
-            refresh_trackers_frequency: 1.0   # 追踪器刷新频率，频率越高，发现新的VRPN tracker的实时性越强
-            tracker_mainloop_frequency: 100.0 # 追踪器主循环频率，频率越高，越不容易丢失VRPN数据包，但同时计算负载越大
+            server: 192.168.3.41                 # VRPN server在局域网内的IP
+            port: 3883                           # VRPN server的服务端口
+            frame_id: "world"                    # reference frame参数
+            mainloop_frequency: 100.0            # 主循环频率，频率越高，越不容易丢失VRPN数据包，但同时计算负载越大
+            refresh_trackers_frequency: 1.0      # 追踪器刷新频率，频率越高，发现新的VRPN tracker的实时性越强
+            tracker_mainloop_frequency: 100.0    # 追踪器主循环频率，频率越高，越不容易丢失VRPN数据包，但同时计算负载越大
    ```
 
    * 根据动捕软件的数据发送设置，配置 `server` 和 `port` 参数
@@ -65,3 +62,4 @@ Ros2 package for transport vrpn data to ros2 topic
    ```
 
    执行该指令后，VRPN动捕数据将被转发为ROS2话题
+   
