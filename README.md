@@ -2,6 +2,8 @@
 
 Ros2 package for transport vrpn data to ros2 topic
 
+将 VRPN 数据转发到 ROS2 话题的功能包
+
 ## 快速使用指南
 
 1. **拉取vrpn_client_ros2代码，并配置VRPN server参数**
@@ -62,3 +64,9 @@ Ros2 package for transport vrpn data to ros2 topic
    ```
 
    执行该指令后，VRPN动捕数据将被转发为ROS2话题
+
+5. **硬件配置**
+
+   * 开启VICON系统等待蓝色指示灯显示，表示初始化成功
+   * 粘贴marker，最好构成无规则形状
+   * IUSL106开启终端并进入Vicon Tracker 4.1.0，Ctrl+Alt+左键勾选目标marker，在Objects栏目取名字并Create新的目标，勾选该目标以开启检测
