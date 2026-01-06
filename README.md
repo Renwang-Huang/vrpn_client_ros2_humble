@@ -76,5 +76,5 @@ Ros2 package for transport vrpn data to ros2 topic
    执行以下命令将VICON数据转发进MAVROS用于PX4飞控的EKF融合：
 
    ```bash
-      python3 vicon_to_mavros.py
+      python3 ~/vrpn_client_ros2/vicon_to_mavros.py
    ```
