@@ -60,7 +60,7 @@ Ros2 package for transport vrpn data to ros2 topic
    ```bash
       cd vrpn_client_ros2/src
       source install/setup.bash
-      ros2 launch vrpn_listener sync_entity_state.launch
+      ros2 launch vrpn_listener vrpn_client.launch
    ```
 
    执行该指令后，VRPN动捕数据将被转发为ROS2话题
