@@ -1,8 +1,8 @@
 /vrpn_listener:
   ros__parameters:
-    server: 192.168.3.41
-    port: 3883
-    frame_id: "world"
-    mainloop_frequency: 100.0 #240.0
-    refresh_trackers_frequency: 1.0
-    tracker_mainloop_frequency: 100.0
+    server: 192.168.50.3                 # VRPN server在局域网内的IP,WINDY Lab配置为192.168.50.3
+    port: 3883                           # VRPN server的服务端口
+    frame_id: "world"                    # reference frame参数
+    mainloop_frequency: 100.0            # 主循环频率，频率越高，越不容易丢失VRPN数据包，但同时计算负载越大
+    refresh_trackers_frequency: 1.0      # 追踪器刷新频率，频率越高，发现新的VRPN tracker的实时性越强
+    tracker_mainloop_frequency: 100.0    # 追踪器主循环频率，频率越高，越不容易丢失VRPN数据包，但同时计算负载越大

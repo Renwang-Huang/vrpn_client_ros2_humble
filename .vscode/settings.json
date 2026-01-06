@@ -1,9 +1,16 @@
 {
+    "ros.distro": "humble",
     "python.autoComplete.extraPaths": [
+        "/home/renwang/realsense_wrapper/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages",
+        "/home/renwang/fast-lio2/src/install/interface/local/lib/python3.10/dist-packages",
+        "/home/renwang/livox_ros_driver2/install/livox_ros_driver2/local/lib/python3.10/dist-packages",
         "/opt/ros/humble/lib/python3.10/site-packages",
         "/opt/ros/humble/local/lib/python3.10/dist-packages"
     ],
     "python.analysis.extraPaths": [
+        "/home/renwang/realsense_wrapper/install/realsense2_camera_msgs/local/lib/python3.10/dist-packages",
+        "/home/renwang/fast-lio2/src/install/interface/local/lib/python3.10/dist-packages",
+        "/home/renwang/livox_ros_driver2/install/livox_ros_driver2/local/lib/python3.10/dist-packages",
         "/opt/ros/humble/lib/python3.10/site-packages",
         "/opt/ros/humble/local/lib/python3.10/dist-packages"
     ]
