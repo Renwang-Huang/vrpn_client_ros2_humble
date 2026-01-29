@@ -2707,11 +2707,11 @@ int check_vrpn_cookie(const char *buffer)
     }
 
     if (strncmp(buffer, vrpn_MAGIC, vrpn_MAGICLEN)) {
-        fprintf(stderr,
-                "check_vrpn_cookie(): "
-                "VRPN Note: minor version number doesn't match: (prefer '%s', "
-                "got '%s').  This is not normally a problem.\n",
-                vrpn_MAGIC, buffer);
+        // fprintf(stderr,
+        //         "check_vrpn_cookie(): "
+        //         "VRPN Note: minor version number doesn't match: (prefer '%s', "
+        //         "got '%s').  This is not normally a problem.\n",
+        //         vrpn_MAGIC, buffer);
         return 1;
     }
 
