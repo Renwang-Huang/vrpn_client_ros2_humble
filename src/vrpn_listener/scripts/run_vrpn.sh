@@ -12,7 +12,8 @@ echo "--------------------------------"
 echo "launching vicon_to_mavros.py..."
 echo "--------------------------------"
 
-# python3 ~/vrpn_client_ros2/vicon_to_mavros.py
-python3 ~/vrpn_client_ros2/vprn_to_px4.py
+python3 ~/vrpn_client_ros2/src/vrpn_listener/scripts/vicon_to_mavros.py
+
+# python3 ~/vrpn_client_ros2/src/vrpn_listener/scripts/vprn_custom_to_px4.py
 
 kill $VRPN_PID
