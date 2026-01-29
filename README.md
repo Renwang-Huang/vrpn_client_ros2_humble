@@ -11,7 +11,7 @@ Ros2 package for transport vrpn data to ros2 topic
    执行以下命令拉取vrpn_client_ros2代码：
 
    ```bash
-      git clone https://github.com/efc-robot/vrpn_client_ros2
+      git clone https://github.com/Renwang-Huang/vrpn_client_ros2_humble
    ```
 
    拉取完成后，编辑代码中的配置文件 `vrpn_client_ros2/src/vrpn_listener/config/params.yaml`：
@@ -48,8 +48,10 @@ Ros2 package for transport vrpn data to ros2 topic
    执行以下命令编译vrpn_client_ros2,其中 `${ROS_DISTRO}` 替换为实际使用的ROS2版本：
 
    ```bash
-      source /opt/ros/${ROS_DISTRO}/setup.bash
+      <!-- source /opt/ros/${ROS_DISTRO}/setup.bash -->
+
       cd vrpn_client_ros2/src
+
       colcon build --packages-select vrpn_listener
    ```
 
@@ -59,7 +61,9 @@ Ros2 package for transport vrpn data to ros2 topic
 
    ```bash
       cd vrpn_client_ros2/src
+
       source install/setup.bash
+
       ros2 launch vrpn_listener vrpn_client.launch
    ```
 
@@ -70,11 +74,12 @@ Ros2 package for transport vrpn data to ros2 topic
    * 开启VICON系统等待蓝色指示灯显示，表示初始化成功
    * 粘贴marker，最好构成无规则形状
    * IUSL106开启终端并进入Vicon Tracker 4.1.0，Ctrl+Alt+左键勾选目标marker，在Objects栏目取名字并Create新的目标，勾选该目标以开启检测
+   * 注意绑定marker的时候对齐坐标系
 
 6. **开启话题转发**
 
    执行以下命令将VICON数据转发进MAVROS用于PX4飞控的EKF融合：
 
    ```bash
-      python3 ~/vrpn_client_ros2/vicon_to_mavros.py
+      bash ~/vrpn_client_ros2/src/vrpn_listener/scripts/run_vrpn.sh
    ```
